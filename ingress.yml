@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Ingress
+metadata:
+  name: myingress
+  labels:
+    name: myingress
+spec:
+  rules:
+  - http:
+      paths:
+      - path: "/cart"
+        backend:
+          service:
+            name: svc1
+            port: 
+              number: 80
+      - path: "/products"
+        backend:
+          service:
+            name: svc2
+            port: 
+              number: 80
