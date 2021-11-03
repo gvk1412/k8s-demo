@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy2
+  labels:
+     app: app-v2
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app-v2
+  template:
+    metadata:
+      labels:
+        app: app-v2
+        zone: prod
+    spec:
+      containers:
+      - name: sample-ctr
+        image: devopstrainer/deploy:v1
+        ports:
+        - containerPort: 80
