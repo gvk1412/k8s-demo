@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: sample-ctr
-        image: devopstrainer/deploy:v1
+        image: cloudadvocate/deploy:v1
         ports:
         - containerPort: 80
